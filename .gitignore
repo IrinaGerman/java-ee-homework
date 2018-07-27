@@ -1,0 +1,10 @@
+.gradle/
+gradle/
+build/
+.idea/
+*.iml
+gradlew
+gradlew.bat
+out/
+target/
+__MACOSX/
