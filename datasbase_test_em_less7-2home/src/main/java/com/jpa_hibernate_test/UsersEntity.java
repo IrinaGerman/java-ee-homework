@@ -4,6 +4,8 @@ import java.util.Objects;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -20,6 +22,7 @@ public class UsersEntity {
 
   @Id
   @Column(name = "ID")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   public int getId() {
     return id;
   }

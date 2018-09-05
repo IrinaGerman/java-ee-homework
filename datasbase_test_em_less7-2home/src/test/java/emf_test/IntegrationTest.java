@@ -24,6 +24,6 @@ public class IntegrationTest {
 
     Query query = entityManager.createQuery("from UsersEntity ");
     List resultList = query.getResultList();
-    Assert.assertEquals(1, resultList.size());
+    Assert.assertEquals(2, resultList.size());
   }
 }
