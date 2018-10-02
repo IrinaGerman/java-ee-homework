@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="IrinaNote (generated)" id="1538381916384-1">
+        <createTable catalogName="DB_LESS7" schemaName="PUBLIC" tableName="COMPANIES">
+            <column name="NAME" type="VARCHAR(25)"/>
+            <column name="CODE" type="INT(10)"/>
+            <column name="BANKNUMBER" type="INT(10)"/>
+            <column name="ACCOUNTNUMBER" type="INT(10)"/>
+            <column autoIncrement="true" name="ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_E"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="IrinaNote (generated)" id="1538381916384-2">
+        <createTable catalogName="DB_LESS7" schemaName="PUBLIC" tableName="USERS">
+            <column autoIncrement="true" name="ID" type="BIGINT(19)">
+                <constraints primaryKey="true" primaryKeyName="CONSTRAINT_6"/>
+            </column>
+            <column name="NAME" type="VARCHAR(25)"/>
+            <column name="AGE" type="INT(10)"/>
+            <column name="COMPANY_ID" type="INT(10)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="IrinaNote (generated)" id="1538381916384-3">
+        <addForeignKeyConstraint baseColumnNames="COMPANY_ID" baseTableCatalogName="DB_LESS7" baseTableName="USERS" baseTableSchemaName="PUBLIC" constraintName="FK_USER_COMPANY" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ID" referencedTableCatalogName="DB_LESS7" referencedTableName="COMPANIES" referencedTableSchemaName="PUBLIC"/>
+    </changeSet>
+</databaseChangeLog>
